@@ -114,26 +114,52 @@ class SinglyLinkedList {
 
 	insert(value, index) {
 		if (index < 0 || index > this.length) return false;
-
-		if (index === 0) {
-			this.unShift(value);
-			return true;
-		}
-
-		if (index === this.length) {
-			this.push(value);
-			return true;
-		}
+		if (index === 0) return !!this.unShift(value);
+		if (index === this.length) return !!this.push(value);
 
 		const newNode = new Node(value);
 
-		const preIndexNode = this.get(index - 1);
+		const prevNode = this.get(index - 1);
 
-		newNode.next = preIndexNode.next;
-		preIndexNode.next = newNode;
+		newNode.next = prevNode.next;
+		prevNode.next = newNode;
 
 		this.length++;
 		return true;
+	}
+
+	remove(index) {
+		if (index < 0 || index >= this.length) return false;
+		if (index === 0) return this.shift();
+		if (index === this.length - 1) return this.pop();
+
+		let prevNode = this.get(index - 1);
+		let removedNode = prevNode.next;
+		let removedNodeValue = removedNode.value;
+		prevNode.next = removedNode.next;
+		removedNode = null;
+
+		this.length--;
+		return removedNodeValue;
+	}
+
+	// head (0)-> (1)-> (2)-> tail (3)->null
+	reverse() {
+		let curr = this.head;
+		let prev = null;
+		let next;
+
+		while (curr) {
+			next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+
+		let temp = this.head;
+		this.head = this.tail;
+		this.tail = temp;
+		return this;
 	}
 }
 
@@ -143,11 +169,11 @@ list.push(0);
 list.push(1);
 list.push(2);
 list.push(3);
-list.push(4);
-list.push(5);
-list.push(6);
-list.push(7);
-list.push(8);
+// list.push(4);
+// list.push(5);
+// list.push(6);
+// list.push(7);
+// list.push(8);
 // console.log(list);
 // console.log(list.pop());
 // console.log(list.pop());
@@ -155,9 +181,12 @@ list.push(8);
 // list.unShift("hi");
 // list.unShift("bye");
 // console.log(list.unShift("!"));
-console.log(list.get(4));
-console.log(list.set(6, 300000));
-console.log(list.insert("aaassssssssss", 9));
+// console.log(list.get(4));
+// console.log(list.set(6, 300000));
+// console.log(list.insert("aaassssssssss", 0));
+// console.log(list.remove(4));
+list.reverse();
+// list.traverse()
 console.log(list);
 // console.log(list.shift());
 // console.log(list.shift());
