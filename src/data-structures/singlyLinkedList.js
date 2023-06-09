@@ -1,4 +1,4 @@
-import Node from "../nodes/singly_node";
+import Node from "../nodes/singlyLinkedList_node.js";
 
 class SinglyLinkedList {
 	head = null;
@@ -35,8 +35,8 @@ class SinglyLinkedList {
 		let newTail = current;
 
 		while (current.next) {
-			newTail = current;
 			current = current.next;
+			newTail = current;
 		}
 
 		this.tail = newTail;
@@ -143,7 +143,6 @@ class SinglyLinkedList {
 		return removedNodeValue;
 	}
 
-	// head (0)-> (1)-> (2)-> tail (3)->null
 	reverse() {
 		let curr = this.head;
 		let prev = null;
@@ -163,41 +162,13 @@ class SinglyLinkedList {
 	}
 }
 
-const list = new SinglyLinkedList();
+// const list = new SinglyLinkedList();
 
-list.push(0);
-list.push(1);
-list.push(2);
-list.push(3);
-// list.push(4);
-// list.push(5);
-// list.push(6);
-// list.push(7);
-// list.push(8);
+// list.push(0);
+// list.push(1);
+// list.push(2);
+// list.push(3);
+// list.push(3);
+// list.push(3);
+// list.push(3);
 // console.log(list);
-// console.log(list.pop());
-// console.log(list.pop());
-// console.log(list.pop());
-// list.unShift("hi");
-// list.unShift("bye");
-// console.log(list.unShift("!"));
-// console.log(list.get(4));
-// console.log(list.set(6, 300000));
-// console.log(list.insert("aaassssssssss", 0));
-// console.log(list.remove(4));
-list.reverse();
-// list.traverse()
-console.log(list);
-// console.log(list.shift());
-// console.log(list.shift());
-// console.log(list.shift());
-// console.log(list.shift());
-// console.log(list);
-// console.dir(list, { depth: null });
-
-// const node = new Node("1");
-// node.next = new Node("2");
-// node.next.next = new Node("3");
-// node.next.next.next = new Node("4");
-
-// console.log(node);
