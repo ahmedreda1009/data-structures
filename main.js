@@ -4,6 +4,7 @@
 import { setupCounter } from "./counter.js";
 import "./src/data-structures/singlyLinkedList.js";
 import "./src/data-structures/DoublyLinkedList.js";
+import "./src/data-structures/Stack.js";
 
 document.querySelector("#app").innerHTML = `
   <div>

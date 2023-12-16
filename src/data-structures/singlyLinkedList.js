@@ -1,4 +1,4 @@
-import Node from "../nodes/singlyLinkedList_node.js";
+import Node from "../nodes/Node.js";
 
 class SinglyLinkedList {
 	head = null;

@@ -200,26 +200,26 @@ class DoublyLinkedList {
 	}
 }
 
-const list = new DoublyLinkedList();
-list.push(3);
-list.push(4);
-list.push(5);
-list.push(6);
-list.push(7);
-list.push(8);
-list.push(9);
-console.log(list);
+// const list = new DoublyLinkedList();
+// list.push(3);
+// list.push(4);
+// list.push(5);
+// list.push(6);
+// list.push(7);
+// list.push(8);
+// list.push(9);
+// console.log(list);
 // console.log(list.pop());
 // console.log(list.pop());
 // console.log(list.pop());
 // console.log(list.shift());
-console.log(list.unshift(2));
-console.log(list.unshift(1));
-console.log(list.get(4));
-console.log(list.insert(2, 999));
-console.log(list.set(0, 555));
-console.log(list.remove(1));
-console.log(list);
+// console.log(list.unshift(2));
+// console.log(list.unshift(1));
+// console.log(list.get(4));
+// console.log(list.insert(2, 999));
+// console.log(list.set(0, 555));
+// console.log(list.remove(1));
+// console.log(list);
 
 // //      0       1       2       3      4        5       6       7
 // // <--head<-->node<-->node<-->node<-->node<-->node<-->node<-->tail
