@@ -1,10 +1,11 @@
-// import "./style.css";
+import "./style.css";
 // import javascriptLogo from "./javascript.svg";
 // import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.js";
 import "./src/data-structures/singlyLinkedList.js";
 import "./src/data-structures/DoublyLinkedList.js";
 import "./src/data-structures/Stack.js";
+import "./src/data-structures/Queue.js";
 
 document.querySelector("#app").innerHTML = `
   <div>
