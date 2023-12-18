@@ -6,6 +6,7 @@ import "./src/data-structures/singlyLinkedList.js";
 import "./src/data-structures/DoublyLinkedList.js";
 import "./src/data-structures/Stack.js";
 import "./src/data-structures/Queue.js";
+import "./src/data-structures/BTS.js";
 
 document.querySelector("#app").innerHTML = `
   <div>

@@ -1,6 +1,6 @@
 import Node from "../nodes/Node";
 
-class Queue {
+export default class Queue {
     constructor() {
         this.first = null;
         this.last = null;
@@ -35,15 +35,15 @@ class Queue {
     }
 }
 
-let q = new Queue();
-console.log(q.enqueue(1));
-console.log(q.enqueue(2));
-console.log(q.enqueue(3));
-console.log(q.enqueue(4));
-console.log(q.dequeue());
-console.log(q.dequeue());
-console.log(q.dequeue());
-console.log(q.dequeue());
-console.log(q.dequeue());
+// let q = new Queue();
+// console.log(q.enqueue(1));
+// console.log(q.enqueue(2));
+// console.log(q.enqueue(3));
+// console.log(q.enqueue(4));
+// console.log(q.dequeue());
+// console.log(q.dequeue());
+// console.log(q.dequeue());
+// console.log(q.dequeue());
+// console.log(q.dequeue());
 
-console.log(q);
+// console.log(q);
